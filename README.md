@@ -1,24 +1,32 @@
-# coffeechat
+## ☕️ 커피챗
+최신 트렌드와 CS에 대해 이야기하는 것을 좋아해요. 
+요즘 커피챗에 관심을 많이 가지게 되어서 만들어 보았어요.
 
-## Project setup
-```
-npm install
-```
+## 개발
+Vue와 EmailJS를 사용하여 만들었어요. 
+EmailJS를 사용하면 서버를 사용하지 않고도 메일을 보낼 수 있는 기능을 가지고 있어요.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+하지만 서버가 없는대신 특정 매일로 등록된 저의 메일 (shinhuiseong07@gmail.com)으로 메일을 보낼 수 없었어요. 
 
-### Compiles and minifies for production
-```
-npm run build
-```
+이런 이유로 커피챗에서 메일 주소를 입력받도록 했어요. 
 
-### Lints and fixes files
-```
-npm run lint
-```
+메일로 전송하는 템플릿의 코드는 아래와 같아요.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+Title: ☕ {{from_name}} 커피챗 요청합니다.
+
+{{from_email}}
+
+안녕하세요, {{from_name}}입니다.☕커피챗 요청합니다.
+
+{{message}}
+```
+위 틀을 사용해서 사용자가 
+```
+이름: 테스터
+이메일: siniseong@bssm
+메시지: 안녕하세요, 테스트 중임니당
+```
+을 입력하게 되면 아래와 같이 메일에 전송이 되요.
+
+![image](https://github.com/user-attachments/assets/f70e433f-ac3d-4293-9adb-c607752f4c17)
