@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/coffee.vue'
+import HelloWorld from './components/coffee-chat.vue'
 
 export default {
   name: 'App',
